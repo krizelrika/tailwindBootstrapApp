@@ -7,8 +7,7 @@ const employees = [
 
 // Function to display all employees
 function displayEmployees() {
-    const totalEmployees = employees
+    document.getElementById('employeesDetails').innerHTML = employees
         .map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`)
         .join('');
-    document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
