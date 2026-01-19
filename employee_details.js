@@ -4,3 +4,11 @@ const employees = [
     { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
     //... More employee records can be added here
 ];
+
+// Function to display all employees
+function displayEmployees() {
+    const totalEmployees = employees
+        .map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`)
+        .join('');
+    document.getElementById('employeesDetails').innerHTML = totalEmployees;
+}
